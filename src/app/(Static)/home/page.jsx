@@ -1,5 +1,5 @@
 "use client";
-import HomeAnimation from "@/app/(Static)/animation/home";
+import HomeAnimation from "@/app/animation/home"
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';

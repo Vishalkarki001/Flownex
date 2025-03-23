@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "lottie-react";
-import home from "@/app/animation/flownexhome.json"; // Ensure correct path
+import home from "@/animation/flownexhome.json"
 
 const HomeAnimation = () => {
   return (
