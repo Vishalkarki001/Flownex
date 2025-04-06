@@ -1,7 +1,7 @@
 "use client"; // This makes the component run on the client side
 
 import { useState, useEffect } from "react";
-import Loader from "./Loader";
+import Loader from "./loader"
 
 export default function ClientWrapper({ children }) {
   const [isLoading, setIsLoading] = useState(true);
