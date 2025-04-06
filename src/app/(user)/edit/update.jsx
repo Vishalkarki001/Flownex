@@ -19,7 +19,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { auth } from "@/app/firebase/firebase";
-import { updateEmail, updatePassword, updateProfile } from "firebase/auth";
+import {  updatePassword, updateProfile } from "firebase/auth";
 import { toast } from "sonner";
 import { BiSolidShow, BiHide } from "react-icons/bi";
 import LoadingSpinner from "@/components/loadingspiner";
