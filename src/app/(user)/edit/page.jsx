@@ -4,9 +4,8 @@ import { useEffect, useState } from "react";
 import {
   EmailAuthProvider,
   reauthenticateWithCredential,
-  signOut,
 } from "firebase/auth";
-import { sendEmailVerification, verifyBeforeUpdateEmail } from "firebase/auth";
+import {  verifyBeforeUpdateEmail } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import {
