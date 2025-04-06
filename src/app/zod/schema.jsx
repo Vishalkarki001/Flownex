@@ -1,7 +1,7 @@
 "use client";
 import { z } from "zod";
 
-const formSchema = z.object({
+export const RegisterSchema = z.object({
   username: z.string()
     .min(6, "Username must be at least 6 characters long")
     .max(20, "Username must be at most 20 characters long"),
@@ -18,4 +18,8 @@ const formSchema = z.object({
     .regex(/[!@#$%^&*(),.?":{}|<>]/, "Password must contain at least one special character")
 });
 
-export default formSchema;
+export const LoginSchema = z.object({
+  email: z.string(),
+  password: z.string()
+})
+

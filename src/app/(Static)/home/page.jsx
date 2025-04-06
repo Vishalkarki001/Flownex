@@ -10,7 +10,7 @@ export default function Home() {
     <>
     <div className="bg-gradient-to-r from-blue-500 to-orange-200 dark:from-gray-900 dark:to-gray-800 text-white min-h-screen flex flex-col md:flex-row items-center justify-center px-6">
       <div className="md:w-1/2 text-center md:text-left">
-        <motion.h1 className="text-7xl md:text-8xl font-extrabold drop-shadow-xl"
+        <motion.h1 className="text-5xl md:text-8xl font-extrabold drop-shadow-xl"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay:0.5, duration: .4 }}>
@@ -39,7 +39,7 @@ export default function Home() {
           <Button
           >
           <Link
-            href="/start"
+            href="/user-dashboard"
           >
             Get Started
           </Link>

@@ -28,6 +28,6 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/not-found.jsx"  ],
+, "src/app/not-found.jsx", "src/app/(userdashboard)/user-dashboard/page.tsx", "src/app/components/header.jsx", "src/app/(userdashboard)/edit/[id]/page.jsx", "src/app/(userdashboard)/edit/page.jsx", "src/app/firebase/firebase_filestore.tsx", "src/app/firebase/firebase.tsx", "src/app/(login-register)/login/page.tsx", "src/app/(user)/edit/page.jsx"  ],
   "exclude": ["node_modules"]
 }

@@ -1,16 +1,30 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ModeToggle } from "@/components/ui/modetoogle";
-
+import { auth } from "@/app/firebase/firebase";
+import UserAvatar from "@/app/components/avatar"
+import { onAuthStateChanged } from "firebase/auth";
 export default function Header() {
+  const router = useRouter()
+  const [user, setuser] = useState()
+  const [userid, setUserid]  = useState()
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(()=>{
     setIsMounted(true)
+    const unsubscribe = onAuthStateChanged(auth,async (currentuser)=>{
+      setuser(currentuser)
+      if(currentuser){
+      setUserid(currentuser.uid)
+      }else{
+        setUserid(null)
+      }
+    })
+    return ()=> unsubscribe();
   },[])
 
   return (
@@ -26,12 +40,8 @@ export default function Header() {
         </div>
 
         {/* Desktop Actions */}
-        <div className="hidden md:flex items-center space-x-4">
-          <Button variant="outline">
-            <Link href="/register" className="text-lg font-medium">
-              Logout
-            </Link>
-          </Button>
+        <div className="flex items-center space-x-4">
+           <UserAvatar user={user} id = {userid}/>
           {isMounted &&
           <ModeToggle />
 }
